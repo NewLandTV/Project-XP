@@ -1,0 +1,31 @@
+Project Informations
+> Name: Project XP(Service name to be added later)
+> Description: Simple RPG Style Platformer Game
+> Tags: 2D, Unity, Video Game, Story, Platformer
+> Concepts: Avoid(Selections), Transition(Speedly)
+> Development Deadline: 2026. 9. 16. Wednesday
+> Developer: JkhTV
+> Product: NewLand 2019
+> Genre: Action 2D Platformer Story
+> Price: Free
+> Engine: Unity 6000.3.11f1
+
+Story(Prologue)
+> World View: In a fantasy RPG world, a here comes from a distant town. She is bound by a destiny that requires her to save herself or them town. A sudden commotion breaks out in a town. A evil demon king, exuding a powerful and sharp sense, is coming. Will she really be able to protect the town? (Fantasy, RPG, Town, Hero, Adversary=Demon King..., Single Player)
+Play Informations
+
+Game Informations
+> Expected Playtime: An hour or more.
+> Supported Langages: Korean, English
+> Platform: Windows, Android
+> ESD: itch.io(Windows), Google Play(Android)
+> Official Site: Plans for Additional Launches and Integration
+
+Implementation List
+- The main character is designed for platformer style, allowing for easy movement left and right, jumping, and avoiding numerous obstacles.
+- Backgrounds, terrain features, obstacles, and platforms will be managed on a stage-by-stage basis using added assets. To ensure a seamless experience, the system must incorporate real-time loading capabilities so that stages connect continuously rather than existing in isolation (refer to the "Live Scene" loading method).
+- The story unfolds by displaying chat dialogue, the speaker's profile image, the speaker's name and brief details, and the content of their remarks.
+- The ultimate goal of this game is to defeat the Demon King and bring peace to the village. Along the way, the hero will grow stronger, and the enemies will become increasingly diverse. (This refers to cases such as selectively bypassing evasion capabilities or instances where the attack range manifests non-specifically.)
+- Sound effects for actions such as jumping, dodging, attacking enemies, and taking hits must be prepared and played at the appropriate pitch, speed, and volume for each situation. (Since this is a 2D project, sound effects should be managed centrally using a `SoundManager` designed with the Singleton pattern.)
+- The hero can acquire various pieces of equipment—such as health (represented by a set number of hearts that decrease by one upon taking damage or failing to dodge), weapons (melee up to Lv. 5, ranged up to Lv. 3), a cloak (an accessory boosting agility, such as evasion and speed), and armor (which increases health and defense, reducing incoming damage by a certain percentage)—as they progress through the stages. Acquired equipment must be saved and loaded so it remains accessible across scenes, and the player must be able to check their current equipped or unequipped status at any time.
+- For this project, we are designing the scripts and UI using the MVVM (Model-View-ViewModel) pattern. For instance, when a character's stats change in the View, the ViewModel responds by updating the Model. (Reference: https://cocococo.tistory.com/entry/MVVM-%ED%8C%A8%ED%84%B4Model-View-ViewModel%EC%9D%B4%EB%9E%80)
